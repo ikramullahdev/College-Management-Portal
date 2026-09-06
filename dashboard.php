@@ -1,0 +1,1 @@
+<?php session_start(); if(!isset($_SESSION['user'])){header('Location: login.php');exit;} $role=$_SESSION['user']['role']; if($role==='admin') header('Location: admin.php'); elseif($role==='teacher') header('Location: teacher/index.php'); else header('Location: student.php'); exit;
